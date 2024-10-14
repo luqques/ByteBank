@@ -48,9 +48,9 @@ namespace ByteBank.Common
             using (var sw = new StreamWriter(nomeArquivoSaida))
             {
                 // Escrever cabeçalho
-                var cabecalho = propriedades.Select(p => p.Name);
-                    //.Select(p => p.GetCustomAttribute<NomeColunaAttribute>()?.Header
-                    //?? p.Name);
+                var cabecalho = propriedades
+                    .Select(p => p.GetCustomAttribute<NomeColunaAttribute>()?.Header
+                    ?? p.Name);
 
                 sw.WriteLine(string.Join(',', cabecalho));
 
