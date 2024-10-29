@@ -99,5 +99,9 @@ namespace ByteBank.Common
 
             return boletosPorCedenteList;
         }
+        Assembly assembly = Assembly.GetExecutingAssembly();
+        Assembly assembly1 = Assembly.Load("NomeDoAssembly");
+        Assembly assembly2 = Assembly.GetEntryAssembly();
+        Assembly assembly3 = Assembly.GetAssembly(typeof(string));
     }
 }
